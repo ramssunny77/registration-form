@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="bootstrapFormStyles.css">
+    <title>form registration</title>
+</head>
+
+<body>
+    <!-- bootstrap 5 error validations in css styles are not enabling , so using custom js function to enable -->
+    <form id="registartion-form" class="px-5 py-5 xs sm md lg xl xxl" action="bootstrapFormTableData.html" method="POST">
+        <div class="mb-3">
+            <label for="inputUserName" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputUserName" name="userName" />
+                <div class="invalid-feedback">Please enter the username.</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="inputPhoneNumber" class="col-sm-2 col-form-label">Phone Number</label>
+            <div class="col-sm-10">
+                <input type="tel" class="form-control" id="inputPhoneNumber" name="phoneNumber"
+                    pattern="\+[1-9]{2}-[0-9]{4}-[0-9]{6}" placeholder="+91-9999-000000" />
+                <div class="invalid-feedback">Please enter the phone number.</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="inputEmail" class="form-label">Email address</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail" placeholder="name@example.com"
+                    name="emailAddress" />
+                <div class="invalid-feedback">Please enter the email.</div>
+            </div>
+            <div class="dropdown-wrapper mb-3 mt-3 col-sm-10">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-gender-female gender-icons" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M8 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM3 5a5 5 0 1 1 5.5 4.975V12h2a.5.5 0 0 1 0 1h-2v2.5a.5.5 0 0 1-1 0V13h-2a.5.5 0 0 1 0-1h2V9.975A5 5 0 0 1 3 5z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-gender-male gender-icons" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M9.5 2a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V2.707L9.871 6.836a5 5 0 1 1-.707-.707L13.293 2H9.5zM6 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8z" />
+                </svg>
+                <select class="form-select form-select-sm mb-3" aria-label=".form-select-sm" name="gender">
+                    <option>Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <span class="col-sm-10 custom-gender-error-message">Please select the Gender</span>
+            </div>
+
+        </div>
+        <div class="form-floating ch-set-textArea mb-3 col-sm-10">
+            <textarea class="form-control presentAddresstextArea" placeholder="enter present address"
+                id="floatingTextarea" name="presentAddress"></textarea>
+            <label for="floatingTextarea">Present Address</label>
+            <span class="col-sm-10 custom-presentAddress-error-message">Please enter the present Address</span>
+
+        </div>
+        <div class="form-check prefill-address-checkbox col-sm-10">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" disabled />
+            <label class="form-check-label" for="flexCheckChecked">
+                fill permanent address same as present address
+            </label>
+        </div>
+        <div class="form-floating ch-set-textArea mb-3 col-sm-10">
+            <textarea class="form-control permanentAddresstextArea" placeholder="enter permanent address"
+                id="floatingTextarea" name="permanentAddress"></textarea>
+            <label for="floatingTextarea">Permanent Address</label>
+            <span class="col-sm-10 custom-permanentAddress-error-message">Please enter the permanent Address</span>
+
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary" type="submit">Submit form</button>
+        </div>
+    </form>
+
+    <script src="bootstrapFieldsData.js" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

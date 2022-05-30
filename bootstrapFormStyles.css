@@ -1,0 +1,30 @@
+.dropdown-wrapper {
+    position: relative;
+}
+
+body{
+    margin:20px auto;
+    border:1px solid #000;
+    width:700px;
+    padding: 20px;
+    height: auto;
+    font-size:300;
+}
+
+.gender-icons {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+}
+
+.custom-gender-error-message,
+.custom-permanentAddress-error-message,
+.custom-presentAddress-error-message {
+    display: none;
+    color: red;
+}
+
+.registartion-form {
+    padding: 50px
+}
